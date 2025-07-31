@@ -18,7 +18,7 @@ function App() {
       <Route index element={<Circ/>}/>
       <Route path='card' element={<Card />}/>
       <Route path='practice' element={<Practice />}/>
-      <Route path='slider' element={<ImageSlider />}/>
+      {/* <Route path='slider' element={<ImageSlider />}/> */}
       <Route path='useeffect' element={<UseEffect />}/>
       
       <Route path='circ' element={<HomePage />}/>

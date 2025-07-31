@@ -18,7 +18,7 @@ export default function Header() {
               <Link to="/circ">Home</Link>
             </li>
             <li>
-              <Link to="/slider">About</Link>
+              About
             </li>
             <li>
               <Link to="/useeffect">Features</Link>
