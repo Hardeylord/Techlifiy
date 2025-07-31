@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "../lib/utils";
 import { Spotlight } from "../Components/Spotlight";
 import { ArrowRight, MoveRight, PlayCircle } from "lucide-react";
-import "../pages/avatar.css";
+import "./avatar.css";
 
 export function SpotlightPreview() {
   return (
