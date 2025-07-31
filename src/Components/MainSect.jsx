@@ -108,7 +108,7 @@ export const MainSect = () => {
         </h1>
         <a href="https://youtu.be/LBOhVng5rk8?si=FwOgYcSPebmsUAqm" target="_blank" rel="noopener noreferrer">
               <img
-                src="techmeet.png"
+                src="/techmeet.png"
                 alt="cocktail"
                 className=" hero-img tech-img  size-full object-contain"
                 href="https://youtu.be/LBOhVng5rk8?si=FwOgYcSPebmsUAqm"
