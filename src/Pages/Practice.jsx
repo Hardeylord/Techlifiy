@@ -1,7 +1,7 @@
 import { MoveRight } from "lucide-react";
 import React from "react";
 import Friends from "../Components/Friends";
-import "../pages/avatar.css";
+import "./avatar.css";
 
 export default function Practice() {
   return (
