@@ -1,5 +1,5 @@
 import React from "react";
-import "../pages/avatar.css";
+import "../Pages/avatar.css";
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger, SplitText } from "gsap/all";

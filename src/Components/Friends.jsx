@@ -1,5 +1,5 @@
 import React from 'react'
-import "../pages/avatar.css";
+import "../Pages/avatar.css";
 
 
 export default function Friends() {

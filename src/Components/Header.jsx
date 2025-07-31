@@ -21,7 +21,7 @@ export default function Header() {
               About
             </li>
             <li>
-              <Link to="/useeffect">Features</Link>
+              <Link to="/useef.fect">Features</Link>
             </li>
             <li>
               <Link to="/practice">Pricing</Link>
