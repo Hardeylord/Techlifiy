@@ -1,27 +1,113 @@
-import React, { useState } from 'react'
+import { ArrowRight, Glasses } from "lucide-react";
+import { transform } from "motion";
+import { image } from "motion/react-client";
+import React, { useState } from "react";
+import { useMediaQuery } from 'react-responsive'
 
 export default function UseEffect() {
-  const[Increment, setIncrement]=useState(0)
-  function increase() {
 
-    setInterval(()=>{
-      setIncrement(prev => prev + 1)
-    }, 1000)
+  const isMobile=useMediaQuery({maxWidth:767})
 
-    // const intervalId = setInterval(() => {
-    //   setIncrement(prev => {
-    //     if (prev >= 10) {
-    //       clearInterval(intervalId);
-    //       return prev;
-    //     }
-    //     return prev + 1;
-    //   });
-    // }, 1000);
-  }
+  const styles = {
+    height: "200px",
+    width: "200px",
+    borderRadius: "20px",
+    borderWidth: "1px",
+  };
+  // const images = [
+  //   {
+  //     image: "/glasses/glass5.png",
+  //     transform:'translateX(-90%) rotate(-5deg)'
+  //   },
+  //   {
+  //     image: "/glasses/glass3.png",
+  //     transform:'translateX(-80%) rotate(0deg)'
+  //   },
+  //   {
+  //     image: "/glasses/glass2.png",
+  //     transform:'translateX(80%) rotate(5deg)'
+  //   },
+  //   {
+  //     image: "/glasses/glass4.png",
+  //     transform:'translateX(90%) rotate(10deg)'
+  //   },
+  //   {
+  //     image: "/glasses/glass1.png",
+  //     transform:''
+  //   },
+  // ];
+
+  const images = [
+    {
+      image: "/glasses/glass5.png",
+      transform: "translateX(-220px) rotate(-25deg) scale(0.8)",
+      mobileTransform: "",
+      zIndex: 1,
+      opacity: 0.4,
+    },
+    {
+      image: "/glasses/glass3.png",
+      transform: "translateX(-120px) rotate(-15deg) scale(0.9)",
+      zIndex: 2,
+      opacity: 0.7,
+    },
+    {
+      image: "/glasses/glass1.png",
+      transform: "translateX(0px) rotateY(0deg)",
+      zIndex: 5,
+      opacity: 1,
+    },
+    {
+      image: "/glasses/glass2.png",
+      transform: "translateX(120px) rotate(15deg) scale(0.9)",
+      zIndex: 2,
+      opacity: 0.7,
+    },
+    {
+      image: "/glasses/glass4.png",
+      transform: "translateX(220px) rotate(25deg) scale(0.8)",
+      zIndex: 1,
+      opacity: 0.4,
+    },
+  ];
+  
   return (
-    <div>
-      <button onClick={increase}  className='py-2 px-4 bg-black text-white rounded-full'>Increment</button>
-      <p>{Increment}</p>
-    </div>
-  )
+    <>
+      <div className="h-[70vh] md:h-screen overflow-auto relative flex justify-center items-center flex-col bg-[url(/neon/neon.jpg)] bg-center bg-cover">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 from-10% to-black to-90% backdrop-blur-sm z-0" />
+
+        <div className="z-10 space-y-2 mt-8 md:mt-32 text-white flex flex-col justify-center items-center">
+          <Glasses color="#ffffff" size={48} />
+          <div className="h-72 w-full relative flex">
+            {images.map((image, index) => (
+              <div className="absolute inset-0 flex justify-center items-center">
+                <img
+                  className="object-cover object-center"
+                  style={{
+                    height: "200px",
+                    width: isMobile ? "150px" : "200px",
+                    borderRadius: "20px",
+                    borderWidth: "1px",
+                    transform:image.transform,
+                    zIndex:image.zIndex,
+                    opacity:image.opacity
+                  }}
+                  src={image.image}
+                />
+              </div>
+            ))}
+          </div>
+          <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-medium text-transparent md:text-6xl">
+          Eyewear That Stands Out
+        </h1>
+          <button className="flex items-center justify-center bg-white rounded-full px-3 py-2 space-x-3">
+            <p className="text-black pl-3">Enter Store</p>
+            <span className="bg-black rounded-full p-1">
+              <ArrowRight color="#ffffff" strokeWidth={1.5} />
+            </span>
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }
