@@ -7,6 +7,8 @@ import ImageSlider from './Pages/ImageSlider'
 import UseEffect from './Pages/UseEffect'
 import Practice from './Pages/Practice'
 import Circ from './Pages/Circ'
+import { Food } from './Pages/Food'
+import { Api } from './Pages/Api'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
       <Route path='card' element={<Card />}/>
       <Route path='practice' element={<Practice />}/>
       <Route path='useeffect' element={<UseEffect />}/>
+      <Route path='food' element={<Food />}/>
+      <Route path='api' element={<Api />}/>
       
       <Route path='circ' element={<HomePage />}/>
       </Route>

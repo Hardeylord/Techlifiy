@@ -88,3 +88,19 @@ margin-right: 0;
   mask-size: contain;
   mask-size: 50%;
 }
+
+.cake-img {
+  width: 100%;
+  height: auto;
+
+  -webkit-mask-image: url("/pastries/imageMask.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url("/pastries/imageMask.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  mask-mode: alpha;
+}

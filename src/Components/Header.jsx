@@ -1,24 +1,55 @@
-import { Sprout } from "lucide-react";
+import { MenuIcon, Sprout } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 
 export default function Header() {
   //#1F1F1F
 
   // <img src="/Rectangle.png" alt=""/>
+
+  useGSAP(()=>{
+    const headerTimline=gsap.timeline({scrollTrigger:{
+      trigger:".header",
+      start:'bottom top',
+      scrub:true,
+    }})
+    headerTimline.to('.hideBtn', {
+      display:"none",
+      ease:'power1.inOut'
+    })
+    .to('.header', {
+      width:'20%',
+      ease:'power1.inOut',
+      backgroundColor: "rgba(9, 11, 29, 0.6)", 
+      backdropFilter: "blur(10px)",
+    })
+    // bg-white/30 backdrop-blur-sm
+    .to('.menu', {
+      display:'none',
+      ease:'power1.inOut'
+    })
+    .to('.hamburgr', {
+      display:'flex',
+      ease:'power1.inOut'
+    })
+  }, [])
+
   return (
     // <div className="w-full py-2 px-10 md:px-40 bg-slate-950">
-      <div className="bg-[#090B1D] z-50 fixed top-4 left-1/2 transform -translate-x-1/2 w-[80%] border flex justify-between items-center p-3 rounded-[112px]">
+      <div className="bg-[#090B1D] header z-50 fixed top-4 left-1/2 transform -translate-x-1/2 w-[80%] border flex justify-between items-center p-3 rounded-[112px]">
         <div className="flex space-x-1 relative">
           <img className="h-[30px]" src="oLogo.svg" alt="" />
         </div>
-        <div className="hidden md:flex">
+        <div className="hidden menu md:flex">
           <ul className="flex font-[400] space-x-8 text-white">
             <li>
               <Link to="/circ">Home</Link>
             </li>
             <li>
-              About
+              <Link to="/food">Food</Link>
             </li>
             <li>
               <Link to="/useeffect">Features</Link>
@@ -26,12 +57,15 @@ export default function Header() {
             <li>
               <Link to="/practice">Pricing</Link>
             </li>
-            <li>Contact</li>
+            <li><Link to="/api">Api</Link></li>
           </ul>
         </div>
-        <div className="text-white space-x-2">
+        <div className="hamburgr hidden">
+          <MenuIcon className="cursor-pointer" stroke="white"/>
+        </div>
+        <div className="text-white hideBtn space-x-2">
           <a
-            className="bg-[#2550E1] drop-shadow-lg drop-shadow-[#2550E1]/50 px-3 py-2 rounded-[100px]  font-medium"
+            className="bg-[#2550E1] header-btn drop-shadow-lg drop-shadow-[#2550E1]/50 px-3 py-2 rounded-[100px]  font-medium"
             href="http://"
           >
             Get started
@@ -41,3 +75,4 @@ export default function Header() {
     // </div>
   );
 }
+
