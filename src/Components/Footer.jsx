@@ -39,7 +39,7 @@ export const Footer = () => {
         </div>
         <div className="md:w-1/4 space-y-3">
           <h1 className="text-2xl text-center md:text-start">SUPPORT</h1>
-          <ul className="flex flex-col text-center font-[400] md:space-x-8 text-white">
+          <ul className="flex flex-col md:text-start text-center font-[400] md:space-x-8 text-white">
             <li>
               <Link to="/circ">FAQ</Link>
             </li>
