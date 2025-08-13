@@ -29,7 +29,7 @@ export default function Header() {
         ease: "power1.inOut",
       })
       .to(".header", {
-        width: "20%",
+        width: IS_MOBILE ? "80%" : "20%",
         ease: "power1.inOut",
         backgroundColor: "rgba(9, 11, 29, 0.6)",
         backdropFilter: "blur(10px)",

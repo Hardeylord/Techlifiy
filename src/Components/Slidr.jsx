@@ -31,7 +31,7 @@ export const Slidr = () => {
   const [eImage, seteImage] = useState(null);
   return (
     <>
-      <div className="bg-[#09020D] text-white w-full h-[100vh] flex flex-col md:flex-row justify-center items-center">
+      <div className="bg-[#09020D] text-white space-y-5 w-full h-[100vh] flex flex-col md:flex-row justify-center items-center">
         <div className="md:w-1/3 gap-y-5 flex flex-col px-10">
           <h1 className={text}>The MAGGICRAFT</h1>
           <p className={para}>
@@ -49,7 +49,7 @@ export const Slidr = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-row md:w-2/3 h-[80%] gap-2 justify-center">
+        <div className="flex flex-row w-full px-2.5 md:px-0 md:w-2/3 h-[80%] gap-2 justify-center">
           {arrayImage.map((box, index) => (
             <div
               onClick={() => seteImage(index)}
@@ -59,7 +59,7 @@ export const Slidr = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
                 transition: "all 0.3s ease",
-                width: eImage === index ? "40%" : "50px",
+                width: eImage === index ? onMobile ? "100%" :'40%' : "50px",
               }}
               className="h-full flex items-end cursor-pointer p-4 relative justify-center rounded-[42px] overflow-hidden"
             >
