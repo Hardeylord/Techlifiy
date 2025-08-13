@@ -15,35 +15,35 @@ export default function Header() {
 
   // <img src="/Rectangle.png" alt=""/>
 
-  useGSAP(() => {
-    const headerTimline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".header",
-        start: "bottom top",
-        scrub: true,
-      },
-    });
-    headerTimline
-      .to(".hideBtn", {
-        display: "none",
-        ease: "power1.inOut",
-      })
-      .to(".header", {
-        width: IS_MOBILE ? "80%" : "20%",
-        ease: "power1.inOut",
-        backgroundColor: "rgba(9, 11, 29, 0.6)",
-        backdropFilter: "blur(10px)",
-      })
-      // bg-white/30 backdrop-blur-sm
-      .to(".menu", {
-        display: "none",
-        ease: "power1.inOut",
-      })
-      .to(".hamburgr", {
-        display: "flex",
-        ease: "power1.inOut",
-      });
-  }, []);
+  // useGSAP(() => {
+  //   const headerTimline = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ".header",
+  //       start: "bottom top",
+  //       scrub: true,
+  //     },
+  //   });
+  //   headerTimline
+  //     .to(".hideBtn", {
+  //       display: "none",
+  //       ease: "power1.inOut",
+  //     })
+  //     .to(".header", {
+  //       width: IS_MOBILE ? "80%" : "20%",
+  //       ease: "power1.inOut",
+  //       backgroundColor: "rgba(9, 11, 29, 0.6)",
+  //       backdropFilter: "blur(10px)",
+  //     })
+  //     // bg-white/30 backdrop-blur-sm
+  //     .to(".menu", {
+  //       display: "none",
+  //       ease: "power1.inOut",
+  //     })
+  //     .to(".hamburgr", {
+  //       display: "flex",
+  //       ease: "power1.inOut",
+  //     });
+  // }, []);
 
   return (
     // <div className="w-full py-2 px-10 md:px-40 bg-slate-950">
