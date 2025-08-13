@@ -88,7 +88,7 @@ export default function UseEffect() {
 
   return (
     <>
-      <div className="h-screen overflow-auto md:overflow-hidden relative  py-4 flex justify-center items-center flex-col bg-[url(/neon/neon.jpg)] bg-center bg-cover">
+      <div className="h-screen overflow-auto scrollbar-hide md:overflow-hidden relative  py-4 flex justify-center items-center flex-col bg-[url(/neon/neon.jpg)] bg-center bg-cover">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 from-10% to-black to-90% backdrop-blur-sm z-0" />
 
         <div className="z-10 space-y-2 mt-8 md:mt-16 text-white flex flex-col justify-center items-center">
