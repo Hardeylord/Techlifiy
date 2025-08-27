@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <>
-      <div className="flex md:flex-row flex-col space-y-5 w-full h-fit justify-center py-10 px-5 text-white bg-[#09020D]">
+      <div className="flex md:flex-row flex-col space-y-5 w-full h-fit justify-center py-10 px-5 text-white bg-[#09020D] inset-shadow-sm inset-shadow-[#2550E1]">
         <div className="md:w-1/4 flex flex-col items-center justify-center space-y-4">
           <div className="flex space-x-1 relative">
             <img className="h-[30px]" src="oLogo.svg" alt="" />

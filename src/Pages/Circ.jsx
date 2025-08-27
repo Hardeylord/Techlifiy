@@ -9,7 +9,9 @@ export default function Circ() {
     <>
     <SpotlightPreview/>
     <MainSect/>
-    <div className="relative w-full h-[400px] overflow-hidden bg-black"></div>
+    <div className="relative w-full h-[400px] overflow-hidden bg-black">
+      
+    </div>
     {/* <div className="relative w-full h-[400px] overflow-hidden bg-black">
     <div className="absolute top-[-70%] left-1/2 -translate-x-1/2 w-[200%] h-[200%] rounded-full bg-black" />
     <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-[80%] h-[80%] rounded-full bg-[#4F5DFF]/40 blur-[100px] opacity-70" />

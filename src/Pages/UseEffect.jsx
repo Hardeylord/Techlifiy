@@ -42,26 +42,26 @@ export default function UseEffect() {
 
   const images = [
     {
-      image: "/glasses/glass5.png",
+      image: "/glasses/glass5-min.png",
       transform: "translateX(-220px) rotate(-25deg) scale(0.8)",
       mobileTransform: "",
       zIndex: 1,
       opacity: 0.4,
     },
     {
-      image: "/glasses/glass3.png",
+      image: "/glasses/glass3-min.png",
       transform: "translateX(-120px) rotate(-15deg) scale(0.9)",
       zIndex: 2,
       opacity: 0.7,
     },
     {
-      image: "/glasses/glass1.png",
+      image: "/glasses/glass1-min.png",
       transform: "translateX(0px) rotateY(0deg)",
       zIndex: 5,
       opacity: 1,
     },
     {
-      image: "/glasses/glass2.png",
+      image: "/glasses/glass2-min.png",
       transform: "translateX(120px) rotate(15deg) scale(0.9)",
       zIndex: 2,
       opacity: 0.7,
@@ -88,7 +88,7 @@ export default function UseEffect() {
 
   return (
     <>
-      <div className="h-screen overflow-auto scrollbar-hide md:overflow-hidden relative  py-4 flex justify-center items-center flex-col bg-[url(/neon/neon.jpg)] bg-center bg-cover">
+      <div className="h-screen overflow-auto scrollbar-hide md:overflow-hidden relative  py-4 flex justify-center items-center flex-col bg-[url(/neon/neon-min.jpg)] bg-center bg-cover">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 from-10% to-black to-90% backdrop-blur-sm z-0" />
 
         <div className="z-10 space-y-2 mt-8 md:mt-16 text-white flex flex-col justify-center items-center">

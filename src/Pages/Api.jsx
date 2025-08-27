@@ -6,6 +6,9 @@ import { useRive, Layout, Fit, Alignment } from "@rive-app/react-canvas";
 import { SearchPrd } from "../Components/SearchPrd";
 import { PinScroll } from "../Components/PinScroll";
 import { Game } from "../Components/Game";
+import { Button, HStack } from "@chakra-ui/react"
+
+
 export const Api = () => {
   const { rive, RiveComponent } = useRive({
     src: "/nbaranimated (1).riv",
@@ -102,7 +105,6 @@ export const Api = () => {
           </div>
         </div>
       </div>
-
       {/* search */}
       <Game/>
       <SearchPrd/>

@@ -9,6 +9,7 @@ import Practice from './Pages/Practice'
 import Circ from './Pages/Circ'
 import { Food } from './Pages/Food'
 import { Api } from './Pages/Api'
+import { Provider } from "@/components/ui/provider"
 
 function App() {
 
